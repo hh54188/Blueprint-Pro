@@ -1,0 +1,23 @@
+@import '../../common//variables.less';
+
+.layout {
+  @media (min-width: @mobileBreakpoint) {
+    :global {
+      .container-fluid {
+        padding: 0;
+
+        & > .row {
+          margin: 0;
+          & > div {
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
