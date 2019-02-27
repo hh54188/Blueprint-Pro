@@ -23,6 +23,24 @@ export default class App extends React.Component {
           <SideMenu className={layoutStyle.side} />
           <Content className={layoutStyle.content}>
             <Loading />
+            {/* <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card /> */}
           </Content>
         </div>
       </div>

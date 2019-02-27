@@ -1,4 +1,5 @@
 @import "../../common/variables.less";
+@import "~@blueprintjs/core/lib/less/variables.less";
 
 .side {
   width: 100%;
@@ -16,7 +17,9 @@
 
   .side {
     width: 250px;
-    height: 100%;
+    min-height: 100%; // calc fallback
+    min-height: calc(100% - @pt-navbar-height); // 100vh fallback
+    min-height: calc(100vh - @pt-navbar-height);
   }
 
   .content {

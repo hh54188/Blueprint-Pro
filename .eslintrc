@@ -5,6 +5,12 @@
     "node": true,
     "browser": true
   },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "prettier/prettier": "error",
     "generator-star-spacing": 0,
@@ -20,6 +26,7 @@
       }
     ],
     "indent": 0,
+    "quotes": ["error", "single"],
     "jsx-quotes": ["error", "prefer-double"],
     "react/prop-types": 0,
     "operator-linebreak": [
