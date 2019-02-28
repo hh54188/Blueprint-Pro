@@ -16,7 +16,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "public"),
     historyApiFallback: true,
-    hot: true,
+    hot: true
   },
   plugins: [
     new HappyPack({
@@ -32,7 +32,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        loaders: ["style-loader", "css-loader"],
+        loaders: ["style-loader", "css-loader"]
       },
       {
         test: /\.js|jsx$/,
@@ -47,7 +47,7 @@ module.exports = {
             loader: "css-loader",
             options: {
               modules: true,
-              localIdentName: '[local]--[hash:base64:5]'
+              localIdentName: "[local]--[hash:base64:5]"
             }
           },
           {
@@ -57,7 +57,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
         loader: "url-loader?limit=100000"
       }
     ]

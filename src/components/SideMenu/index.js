@@ -1,6 +1,15 @@
 import React from "react";
 import classNames from "classnames";
-import { Classes, Icon, Menu, MenuDivider, MenuItem } from "@blueprintjs/core";
+import {
+  Classes,
+  Icon,
+  Menu,
+  MenuDivider,
+  MenuItem,
+  Switch
+} from "@blueprintjs/core";
+
+import AwesomeIcon from "../AwesomeIcon";
 
 import style from "./index.less";
 
@@ -12,20 +21,34 @@ export default class SideMenu extends React.Component {
     const { className = "" } = this.props;
     return (
       <Menu className={classNames(Classes.ELEVATION_2, style.menu, className)}>
-        <MenuItem icon="new-text-box" text="New text box" />
-        <MenuDivider />
+        <MenuDivider title="Platform Filter" />
         <MenuItem
-          className={classNames(Classes.INTENT_PRIMARY)}
-          icon="new-object"
-          text="New object"
+          icon={<AwesomeIcon type="steam" />}
+          labelElement={<Switch className={style.filterSwitch} />}
+          text="Steam"
         />
-        <MenuItem icon="new-link" text="New link" />
-        <MenuDivider />
         <MenuItem
-          icon="cog"
-          labelElement={<Icon icon="share" />}
-          text="Settings..."
+          icon={<AwesomeIcon type="playstation" />}
+          labelElement={<Switch className={style.filterSwitch} />}
+          text="Play Station"
         />
+        <MenuItem
+          icon={<AwesomeIcon type="xbox" />}
+          labelElement={<Switch className={style.filterSwitch} />}
+          text="Xbox"
+        />
+        <MenuItem
+          icon={<AwesomeIcon type="nintendo-switch" />}
+          labelElement={<Switch className={style.filterSwitch} />}
+          text="Nintendo Switch"
+        />
+        <MenuDivider />
+        <MenuItem icon="star" text="Favorites" />
+        <MenuDivider />
+        <MenuItem icon="feed-subscribed" text="Subscription" />
+        <MenuDivider />
+        <MenuItem icon="help" text="FAQ" />
+        <MenuItem icon="envelope" text="Contact" />
       </Menu>
     );
   }
